@@ -15,4 +15,4 @@ COPY . .
 EXPOSE 6111
 
 #her defineres kommandoen som skal kjøres når containeren startes
-CMD ["python", "Kebab_eksamen2"]
+CMD ["python", "Kebab_eksamen2.py"]
