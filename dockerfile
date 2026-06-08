@@ -11,7 +11,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # denne kopierer filene fra den lokale maskinen til arbeidskatalogen i containeren
 COPY . .
 
-# her brukes det port 6565 for å eksponere applikasjonen
+# her brukes det port 6111 for å eksponere applikasjonen
 EXPOSE 6111
 
 #her defineres kommandoen som skal kjøres når containeren startes
