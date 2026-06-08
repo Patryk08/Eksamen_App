@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kebab Meny</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <h1>Kebab Huset</h1>
+            <nav>
+                <a href="/">Meny</a>
+                <a href="/about">Om oss</a>
+                <a href="/help">Brukerveiledning</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h2>Velkommen til vår enkle kebabside</h2>
+            <p>Se gjennom våre 8 beste kebaber og finn din favoritt.</p>
+        </section>
+
+        <section class="menu-grid">
+            {% for kebab in kebab_menu %}
+            <article class="menu-card">
+                <img src="{{ kebab.image }}" alt="{{ kebab.name }} bilde" class="menu-image" />
+                <div class="menu-card-body">
+                    <h3>{{ kebab.name }}</h3>
+                    <p>{{ kebab.description }}</p>
+                    <span class="price">{{ kebab.price }}</span>
+                </div>
+            </article>
+            {% endfor %}
+        </section>
+    </main>
+
+    <footer>
+        <p>Enkel kebabside med Flask, Python, HTML og CSS.</p>
+    </footer>
+</body>
+</html>
